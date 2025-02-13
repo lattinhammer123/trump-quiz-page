@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Credit Card Debt Relief News</title>
+    <title>American Debt Relief News</title>
     <style>
         * {
             box-sizing: border-box;
@@ -23,7 +23,7 @@
         .site-header {
             background: linear-gradient(to right, #1a3875 0%, #1e4488 100%);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            padding: 0.75rem;
+            padding: 0.65rem;
             position: relative;
             z-index: 2;
             border-bottom: 3px solid #c41e3a;
@@ -38,15 +38,15 @@
         }
 
         .logo {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #fff;
         }
 
         .site-title {
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-size: clamp(1.1rem, 2.7vw, 1.4rem);
             font-weight: 600;
             color: white;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -57,77 +57,120 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            padding: 12px;
-            margin-top: 0.5rem;
+            padding: 10px;
+            margin-top: 0.35rem;
         }
 
         .article-container {
             max-width: 800px;
             width: 100%;
             background-color: white;
-            padding: 1.25rem;
+            padding: 1.15rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border: 1px solid #e1e8ed;
         }
 
         .headline {
-            font-size: clamp(1.25rem, 4vw, 2rem);
+            font-size: clamp(1.4rem, 4vw, 2.2rem);
             color: #1a3875;
-            line-height: 1.2;
+            line-height: 1.25;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .date {
             color: #666;
-            font-size: 0.875rem;
+            font-size: 1rem;
             border-bottom: 1px solid #e1e8ed;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
+            padding-bottom: 0.35rem;
+            margin-bottom: 0.75rem;
         }
 
         .article-text {
             color: #333;
-            line-height: 1.4;
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
-            padding: 1rem 0;
+            line-height: 1.5;
+            font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+            padding: 0.75rem 0;
             border-bottom: 1px solid #e1e8ed;
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            margin: 0.75rem auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .quiz-section {
             background: linear-gradient(to bottom, #f8f9fa 0%, #fff 100%);
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-radius: 10px;
-            margin-top: 1rem;
-            border: 1px solid #e1e8ed;
+            margin-top: 1.5rem;
+            border: 2px solid #c41e3a;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-section::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #c41e3a;
         }
 
         .quiz-intro {
-            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            font-size: clamp(1.2rem, 2.7vw, 1.4rem);
             color: #1a3875;
             margin-bottom: 1rem;
             text-align: center;
-            font-weight: 600;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .quiz-intro::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #1a3875, #c41e3a);
+            border-radius: 3px;
         }
 
         .quiz-container {
             background-color: white;
-            padding: 1rem;
+            padding: 1.15rem;
             border-radius: 10px;
             text-align: center;
+            border: 1px solid #e1e8ed;
+            margin-top: 0.5rem;
         }
 
         .progress-steps {
             display: flex;
             justify-content: center;
-            margin-bottom: 1rem;
-            gap: 6px;
+            margin-bottom: 1.25rem;
+            gap: 8px;
         }
 
         .step {
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background-color: #ddd;
             transition: background-color 0.3s;
@@ -135,6 +178,7 @@
 
         .step.active {
             background-color: #c41e3a;
+            box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.2);
         }
 
         .question-container {
@@ -146,22 +190,40 @@
             display: block;
         }
 
+        .question-container h1 {
+            font-size: clamp(1.3rem, 3vw, 1.6rem);
+            margin-bottom: 1rem;
+            color: #1a3875;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
         .button-container {
             display: flex;
-            gap: 0.75rem;
+            gap: 1rem;
             justify-content: center;
             margin-top: 1.5rem;
         }
 
         .yes-btn, .no-btn {
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
+            padding: 0.85rem 2.25rem;
+            font-size: 1.2rem;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             color: white;
             font-weight: 600;
-            min-width: 120px;
+            min-width: 130px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .yes-btn:hover, .no-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .yes-btn:active, .no-btn:active {
+            transform: translateY(0);
         }
 
         .yes-btn {
@@ -174,44 +236,121 @@
 
         .loading-screen {
             display: none;
+            padding: 1rem;
         }
 
-        .loader {
-            width: 30px;
-            height: 30px;
-            border: 3px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 3px solid #3498db;
-            margin: 15px auto;
-            animation: spin 1s linear infinite;
+        .loading-screen h1 {
+            font-size: clamp(1.2rem, 2.7vw, 1.4rem);
+            color: #1a3875;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .status-text {
+            color: #666;
+            font-size: 1.05rem;
+            text-align: center;
+            margin-top: 0.75rem;
         }
 
         .progress-container {
             width: 100%;
             background-color: #f1f1f1;
-            margin: 15px 0;
+            margin: 0.75rem 0;
             border-radius: 8px;
             overflow: hidden;
         }
 
         .progress-bar {
             width: 0%;
-            height: 20px;
-            background: linear-gradient(to right, #1a3875 0%, #c41e3a 100%);
+            height: 16px;
+            background: linear-gradient(to right, #1a3875, #c41e3a);
             border-radius: 8px;
             transition: width 0.5s ease-in-out;
+        }
+
+        .loader {
+            width: 24px;
+            height: 24px;
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #c41e3a;
+            margin: 0.75rem auto;
+            animation: spin 1s linear infinite;
         }
 
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        .site-footer {
+            background: linear-gradient(to right, #1a3875 0%, #1e4488 100%);
+            padding: 1.5rem 1rem;
+            margin-top: 2rem;
+            color: white;
+            border-top: 3px solid #c41e3a;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section {
+            font-size: 0.95rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
     <header class="site-header">
         <div class="header-content">
-            <img src="YOUR-FLAG-IMAGE-URL" alt="American Flag" class="logo">
+            <img src="assets/248401783_110438164764492_2781750951364948262_n.jpeg" alt="American Flag" class="logo">
             <div class="site-title">American Debt Relief News</div>
         </div>
     </header>
@@ -224,6 +363,7 @@
                 
                 <div class="article-text">
                     <p>"The American people are suffering, and nobody knows more about debt relief than me," stated Trump. "This program will help thousands of great Americans reduce their credit card payments by up to 50%. It's going to be huge!"</p>
+                    <img src="assets/signing bills.jpg" alt="Trump Signing Bills" class="article-image">
                 </div>
 
                 <div class="quiz-section">
@@ -284,6 +424,33 @@
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Our Program</h3>
+                <p>We aim to help Americans struggling with credit card debt. Results may vary. Consultation required.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Important Links</h3>
+                <ul class="footer-links">
+                    <li><a href="terms-of-service.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Toll-Free: (888) 393-1840</p>
+                <p>Hours: Mon-Fri 5AM-3PM EST</p>
+                <p>Email: support@americandebtrelief.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 American Debt Relief News. This is an advertorial. Individual results may vary. Not affiliated with any government agency.</p>
+        </div>
+    </footer>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
