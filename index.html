@@ -475,6 +475,15 @@
         window.handleResponse = function(questionNumber, response) {
             answers['q' + questionNumber] = response;
             
+            // Special handling for first question (under $10k debt)
+            if (questionNumber === 1 && response === 'no') {
+                showLoadingScreen();
+                setTimeout(() => {
+                    window.location.href = 'https://b9u7.com/c/92369/61841/?sid=TRP';
+                }, 2000);
+                return;
+            }
+            
             document.querySelectorAll('.step').forEach((step, index) => {
                 if (index <= questionNumber) {
                     step.classList.add('active');
@@ -489,6 +498,9 @@
                 
                 if (yesCount >= 3) {
                     showLoadingScreen();
+                    setTimeout(() => {
+                        window.location.href = 'call.html';
+                    }, 2000);
                 } else {
                     alert('Based on your responses, you may not qualify for this program at this time.');
                     resetQuiz();
