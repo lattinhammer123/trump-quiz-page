@@ -215,7 +215,7 @@
             <h1>Speak With a Trump Debt Relief Specialist Now</h1>
             <p>Our debt relief specialists are standing by to help you reduce your credit card payments by up to 50%. Don't wait - this program has limited availability.</p>
             
-            <a href="tel:8883931840" class="call-button" onclick="return ratag_conversion('tel:8883931840');">
+            <a href="tel:8883931840" class="call-button" onclick="ratag('conversion', {to: 2233}); return true;">
                 <i class="fas fa-phone"></i>
                 Call Now (888) 393-1840
             </a>
@@ -235,14 +235,8 @@
     <!-- Rumble Conversion Pixel Code -->
     <script>
     function ratag_conversion(url) {
-        let callback = function() {
-            if (typeof url !== 'undefined') {
-                window.location = url;
-            }
-        };
-
-        ratag('conversion', {to: 2233, callback: callback});
-        return false;
+        ratag('conversion', {to: 2233});
+        return true;
     }
     </script>
 </body>
